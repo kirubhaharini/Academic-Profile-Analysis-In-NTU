@@ -107,7 +107,8 @@ def plot_gauge_charts(mean_h_index_over_years,mean_citation_growth_rate):
         mode = "gauge+number",
         delta = {'reference': 100},
         value = round(mean_h_index_over_years,2),
-        domain = {'x': [0, 1], 'y': [0, 1]}
+        domain = {'x': [0, 1], 'y': [0, 1]},
+        gauge = { 'axis': { 'range': [0, 100] } }
     ))
     fig2 = go.Figure(go.Indicator(
         mode = "delta",
@@ -431,8 +432,9 @@ def main_page():
             mode = "number",
             # delta = {'reference': 100},
             value = round(mean_h_index_over_years,2),
-            domain = {'x': [0, 1], 'y': [0, 1]}
-            ))
+            domain = {'x': [0, 1], 'y': [0, 1]},
+            gauge = { 'axis': { 'range': [0, 100] } }
+        ))
             fig1.update_layout(
                     autosize=False,
                     width=600,
@@ -444,6 +446,7 @@ def main_page():
                         t=0,
                     ),
                     )
+                
             st.plotly_chart(fig1)
         with coln:
             st.markdown("<h5 style='text-align: center; color: crimson;'>Mean Citation Growth Rate (% over past 3 years)</h5>", unsafe_allow_html=True)
@@ -1218,6 +1221,42 @@ def page2():
             html_str1 = f""" <h4 style='text-align: center; color: crimson;'>{pubs}</h4> """
             st.markdown(html_str1, unsafe_allow_html=True)
 
+        ##############
+        st.markdown('***')
+        st.markdown("<h5 style='text-align: center; color: steelblue;'>Average Number of Publications per year</h5>", unsafe_allow_html=True)
+        col1,col2,col3 = st.columns([3,2,4])
+        with col1:
+            mean_publications_over_years = r1['Total Publications'][0]
+            mean_citation_growth_rate = r1['citation growth rate'][0]
+            fig1,fig2 = plot_gauge_charts(mean_publications_over_years,mean_citation_growth_rate)
+            pubs = r1['Total Publications'][0]
+            if math.isnan(pubs):
+                pubs = 'Not Available'
+            else: pubs = int(pubs)
+            html_str1 = f""" <h4 style='text-align: center; color: crimson;'>{pubs}</h4> """
+            st.markdown(html_str1, unsafe_allow_html=True)
+            # st.plotly_chart(fig1)
+        with col3:
+            mean_publications_over_years = r2['Total Publications'][0]
+            mean_citation_growth_rate = r2['citation growth rate'][0]
+            fig3,fig4 = plot_gauge_charts(mean_publications_over_years,mean_citation_growth_rate)
+            # with coln:
+            # st.plotly_chart(fig3)
+            pubs = r2['Total Publications'][0]
+            if math.isnan(pubs):
+                pubs = 'Not Available'
+            else: pubs = int(pubs)
+            html_str1 = f""" <h4 style='text-align: center; color: crimson;'>{pubs}</h4> """
+            st.markdown(html_str1, unsafe_allow_html=True)
+        st.markdown('***')
+        #############
+
+        st.markdown("<h5 style='text-align: center; color: steelblue;'>Mean Citation Growth Rate (% over past 3 years)</h5>", unsafe_allow_html=True)
+        col1,col2,col3 = st.columns([3,2,4])
+        with col1:
+            st.plotly_chart(fig2)
+        with col3:
+            st.plotly_chart(fig4)
 
         ############## percentile
         st.markdown('***')
