@@ -427,6 +427,23 @@ def main_page():
         colm,colo,coln = st.columns([9,3,6])
         with colm:
             st.markdown("<h5 style='text-align: center; color: crimson;'>Mean h-index (calibrated by years)</h5>", unsafe_allow_html=True)
+            fig1 = go.Figure(go.Indicator(
+            mode = "number",
+            # delta = {'reference': 100},
+            value = round(mean_h_index_over_years,2),
+            domain = {'x': [0, 1], 'y': [0, 1]}
+            ))
+            fig1.update_layout(
+                    autosize=False,
+                    width=600,
+                    height=300,
+                    margin=dict(
+                        l=50,
+                        r=50,
+                        b=50,
+                        t=0,
+                    ),
+                    )
             st.plotly_chart(fig1)
         with coln:
             st.markdown("<h5 style='text-align: center; color: crimson;'>Mean Citation Growth Rate (% over past 3 years)</h5>", unsafe_allow_html=True)
