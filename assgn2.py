@@ -729,11 +729,15 @@ def page2():
         with col4:
             ed1 = r1
             ed1 = ed1['education'][0]
-            st.text(ed1.capitalize())
+            if type(ed1) == str:
+                st.text(ed1.capitalize())
+            else: st.text('-')
         with col6:
             ed2 = r2
             ed2 = ed2['education'][0]
-            st.text(ed2.capitalize())
+            if type(ed2) == str:
+                st.text(ed2.capitalize())
+            else: st.text('-')
 
         ########### research expertise #############
         st.markdown('***')
@@ -1020,11 +1024,15 @@ def page2():
         with col4:
             ed1 = rs1
             ed1 = ed1['education'][0]
-            st.text(ed1.capitalize())
+            if type(ed1) == str:
+                st.text(ed1.capitalize())
+            else: st.text('-')
         with col6:
             ed2 = rs2
             ed2 = ed2['education'][0]
-            st.text(ed2.capitalize())
+            if type(ed2) == str:
+                st.text(ed2.capitalize())
+            else: st.text('-')
 
         ########### research expertise #############
         st.markdown('***')
@@ -1336,11 +1344,15 @@ def page2():
         with col4:
             ed1 = r1
             ed1 = ed1['education'][0]
-            st.text(ed1.capitalize())
+            if type(ed1) == str:
+                st.text(ed1.capitalize())
+            else: st.text('-')
         with col6:
             ed2 = r2
             ed2 = ed2['Education'][0]
-            st.text(ed2.capitalize())
+            if type(ed2) == str:
+                st.text(ed2.capitalize())
+            else: st.text('-')
 
         ########### research expertise #############
         st.markdown('***')
