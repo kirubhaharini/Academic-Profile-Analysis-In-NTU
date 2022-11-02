@@ -389,7 +389,7 @@ def main_page():
                     'Average Career Length: ' + str(i+1) + ' years')
                 time.sleep(0.1)
             status_text_sch1.text(
-                    'Average Career Length: ' + str(round(avg_yrs,2)) + ' years')
+                    'Average Career Length: ' + str(round(avg_yrs,1)) + ' years')
 
             mean_publications_over_years = sum(sch_df['Total Publications'].dropna())/len(sch_df['Total Publications'].dropna())
             mean_citation_growth_rate = sum(sch_df['citation growth rate'].dropna())/len(sch_df['citation growth rate'].dropna())
