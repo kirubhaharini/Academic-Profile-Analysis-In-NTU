@@ -10,9 +10,11 @@ A streamlit website was deployed to visualise these insights, as well as do comp
 The features of the website are as follows:
 
 1. SCSE profile analysis:
+   
    <img width="374" height="312" alt="image" src="https://github.com/user-attachments/assets/635b6d51-4c54-46c7-bd25-d0641a4ae5d0" />
 
    a) Distribution of profiles
+   
     <img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/650719ab-63ed-47e6-8252-5cac1297ebb4" />
    b) Performance in top research areas
     <img width="1780" height="812" alt="image" src="https://github.com/user-attachments/assets/b163ec6d-f5f7-4b60-be06-0414488df200" /> <img width="1648" height="812" alt="image" src="https://github.com/user-attachments/assets/db9c377c-fce5-4f80-a7e3-7cfb6b89db3e" />
