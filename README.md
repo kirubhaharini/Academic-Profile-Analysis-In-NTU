@@ -22,11 +22,13 @@ The features of the website are as follows:
     <img width="2504" height="1106" alt="image" src="https://github.com/user-attachments/assets/156d0c58-990e-48ec-ab7e-7b877e7a34a8" />
 
 3. Compare Individual Researchers
+
    <img width="406" height="384" alt="image" src="https://github.com/user-attachments/assets/fd10ebd4-2622-4ef6-9693-2a2ff1e7e9ce" />
-    Three comparison options:
-   a) "Within SCSE": Any 2 researchers from SCSE
-   b) "Within NTU": Any SCSE researcher with researcher from another faculty
-   c) "With NUS": Any NTU researcher with researcher from NUS Computing
+
+   Three comparison options:
+   (a) "Within SCSE": Any 2 researchers from SCSE
+   (b) "Within NTU": Any SCSE researcher with researcher from another faculty
+   (c) "With NUS": Any NTU researcher with researcher from NUS Computing
 
    Comparisons will be shown side by side with insights such as Career Length, number of papers as lead author, citations by year, common interests, top 5 co-authors, average h-index percentile within their respective faculties and top 5 publication venues.
 
