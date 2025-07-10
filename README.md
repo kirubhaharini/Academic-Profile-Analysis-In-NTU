@@ -6,6 +6,8 @@ All the data used were obtained manually from scratch through scraping using aca
 Insights such as citations growth rate, career length were derived through the other scraped columns from these websites.
 
 A streamlit website was deployed to visualise these insights, as well as do comparisons against SCSE (NTU) and other faculties (from NTU and NUS).
+To view website: https://kirubhaharini-data-products-assgn-2-assgn2-4kvt4t.streamlit.app/
+*Note: Website was built using older streamlit version. Some elements may have depreciated.
 
 The features of the website are as follows:
 
@@ -22,6 +24,8 @@ The features of the website are as follows:
     <img width="2504" height="1106" alt="image" src="https://github.com/user-attachments/assets/156d0c58-990e-48ec-ab7e-7b877e7a34a8" />
 
 3. Compare Individual Researchers
+
+
 
    <img width="406" height="384" alt="image" src="https://github.com/user-attachments/assets/fd10ebd4-2622-4ef6-9693-2a2ff1e7e9ce" />
 
